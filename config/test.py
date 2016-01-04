@@ -3,12 +3,14 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'tjtest',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
-        'USER': 'michael',
+        'USER': '',
         'PASSWORD': '',
         'HOST': '127.0.0.1',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '5432',                      # Set to empty string for default.
     }
 }
+# Make this unique, and don't share it with anybody.
+SECRET_KEY = ''
 
 DEBUG = False
 
@@ -26,5 +28,3 @@ MEDIA_ROOT = ''
 # Example: "/var/www/example.com/static/"
 STATIC_ROOT = '/home/tjugovich/webapps/test_static'
 
-# Make this unique, and don't share it with anybody.
-SECRET_KEY = ''
