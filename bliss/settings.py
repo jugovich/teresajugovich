@@ -1,8 +1,19 @@
 # Django settings for bliss project.
 import os
 
-DEBUG = True
-TEMPLATE_DEBUG = DEBUG
+if 'blissdev' in __file__:
+    _config = 'dev'
+elif 'test' in __file__:
+    _config = 'test'
+else:
+    _config = 'prod'
+
+config_module = __import__('config.%s' % _config, globals(), locals(), 'iCode')
+
+# Load the config settings properties into the local scope.
+for setting in dir(config_module):
+    if setting == setting.upper():
+       locals()[setting] = getattr(config_module, setting)
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -10,21 +21,6 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '',                      # Or path to database file if using sqlite3.
-        # The following settings are not used with sqlite3:
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '',                      # Set to empty string for default.
-    }
-}
-
-# Hosts/domain names that are valid for this site; required if DEBUG is False
-# See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = []
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -49,20 +45,11 @@ USE_L10N = True
 # If you set this to False, Django will not use timezone-aware datetimes.
 USE_TZ = True
 
-# Absolute filesystem path to the directory that will hold user-uploaded files.
-# Example: "/var/www/example.com/media/"
-MEDIA_ROOT = ''
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://example.com/media/", "http://media.example.com/"
-MEDIA_URL = ''
-
-# Absolute path to the directory static files should be collected to.
-# Don't put anything in this directory yourself; store your static files
-# in apps' "static/" subdirectories and in STATICFILES_DIRS.
-# Example: "/var/www/example.com/static/"
-STATIC_ROOT = ''
+MEDIA_URL = '/media/'
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
@@ -84,9 +71,6 @@ STATICFILES_FINDERS = (
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
-# Make this unique, and don't share it with anybody.
-SECRET_KEY = '6-g-8yoq#*1$ax0kv+$u6v=es0u^(*n3ku$awicq4jf3)^a_26'
-
 # List of callables that know how to import templates from various sources.
 TEMPLATES = [
     {
@@ -101,13 +85,9 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
             ],
         },
+        'DEBUG': DEBUG
     }
 ]
-TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
-)
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
