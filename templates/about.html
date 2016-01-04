@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+{% load staticfiles %}
+
+{% block about_active %}class="active"{% endblock %}
+
+{% block slider %}
+{% endblock %}
+
+<!--=== Breadcrumbs ===-->
+{% block breadcrumbs %}
+    <div class="breadcrumbs breadcrumbs-light">
+        <div class="container">
+            <h1 class="pull-left">About Me<Doulas></Doulas></h1>
+        </div>
+    </div><!--/breadcrumbs-->
+{% endblock %}
+<!--=== End Breadcrumbs ===-->
+{% block content %}
+    <div class="container content-sm" style="padding-bottom: 0">
+        <div class="row about-me">
+            <div class="col-sm-4 shadow-wrapper md-margin-bottom-40">
+                <div class="box-shadow shadow-effect-2">
+                    <img class="img-responsive img-bordered full-width" src={% static "assets/img/bio.jpg" %} alt="Bio Picture">
+                </div>
+            </div>
+
+            <div class="col-sm-8">
+                <div class="overflow-h">
+                    <div class="pull-left">
+                        <h2>Teresa Jugovich</h2>
+                        <span> Yoga Instructor, Birth Doula, Artist</span>
+                    </div>
+                    <ul class="social-icons pull-right">
+                        <li><a class="rounded-x social_facebook" data-original-title="Facebook" href="#"></a></li>
+                        <li><a class="rounded-x social_twitter" data-original-title="Twitter" href="#"></a></li>
+                        <li><a class="rounded-x social_googleplus" data-original-title="Google Plus" href="#"></a></li>
+                        <li><a class="rounded-x social_linkedin" data-original-title="Linkedin" href="#"></a></li>
+                    </ul>
+                </div>
+                <p>In 2005 Teresa started to really listen to the intuitive voice within her. Knowing there was a deep need for change in her life, Teresa left New York City and traveled around the world on a journey to heal herself. Jet lagged she wandered in the early morning to her first yoga class in Sydney, Australia…. It was love at first practice. “I knew I had found something that deeply connected with my core. I felt like I was doing something I already knew. I thought to myself; I can change. I can do this. I can feel like this everyday.” After returning to the states, she became a very dedicated yoga practitioner. In the years following, she explored Bikram, Hatha and Vinyasa yoga and is now a devoted Ashtanga yogini finding unparalleled peace and joy in the practice.</p>
+                <p>While watching insurmountable change flourish within her own life, she became inspired by the idea she could help others heal themselves both mentally and physically by actualizing their own innate powers.  In 2006, she studied meditation at the International Hermitage of Suan Mokkh in Thailand under the guidance of Ajahn Poh. Here she began to understand the use of yoga as preparation for meditation. In 2008 she completed her 200-hr Yoga Alliance certification at Yoga Now Chicago with Amy Beth Treciokas. In early 2009 she also took a pilgrimage to deepen her practice and traveled to India to study with her Guru Sharath at the Ashtanga Yoga Research Institute in Mysore.  During the third trimester of her first pregnancy, she ventured to Minneapolis and completed her RPYT certification with the Prenatal Yoga Goddesses Sarah Longacre and Stacy Seebart at Blooma Yoga. She gave birth to her first child in Chicago on February 1, 2012.</p><br>
+                <p>Teresa is an advocate for women and building communities.  She passionately works as a doula helping mothers prepare their body, mind and spirit for birth. After completing her DONA Birth Doula training in 2010, she desired to deepen her knowledge of pregnancy and birth. Inspired by the work of Ina May Gaskin, Teresa went directly to the source and had the pleasure of studying with the extraordinary, globally renowned group of midwives on The Farm at the Midwifery Assistant workshop in Spring 2011.  In December 2012, she attended the Birthing from Within Introductory Workshop and Training with Virginia Bobro in Portland, Oregon.  Shortly thereafter, she relocated to the Twin Cities.</p>
+                <p>Currently Teresa teaches yoga at both Modus Locus and Blooma Yoga.  She is a birth doula serving families throughout the metro.  She is also a photographer and offers both infant and birth photography packages.  She is honored to have been selected as one of the weekly Powderhorn365 photographers for 2016.</p>
+                <p>Teresa is the mother of two sweet, vibrant children and resides with her family in South Minneapolis. She feels her teaching inspiration is beyond her worldly senses. Each class is an opportunity for inspiration, to help individuals turn within, to create a space in which they can deeply connect to their own light, the universal flow of energy and learn to always listen to their hearts.</p>
+            </div>
+        </div>
+
+        <!-- Quote v2 -->
+        <div class="container content">
+            <div class="quote-v2" style="padding-top: 40px; padding-bottom: 0">
+                <p>Do your practice and all is coming.</p>
+                <span>- K. Pattabhi Jois -</span>
+            </div>
+        </div>
+        <!-- End Quote v2 -->
+    </div>
+    <!-- End About Me Block -->
+
+
+
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% load staticfiles %}
+
+{% block css %}
+    <link rel="stylesheet" href={% static "assets/css/pages/page_contact.css"%}>
+{% endblock %}
+
+{% block yoga_active %}active{% endblock %}
+{% block yoga_locations_active %}class="active"{% endblock %}
+
+{% block slider %}
+{% endblock %}
+
+<!--=== Breadcrumbs ===-->
+{% block breadcrumbs %}
+    <div class="breadcrumbs breadcrumbs-light">
+        <div class="container">
+            <h1 class="pull-left">Yoga Locations<Doulas></Doulas></h1>
+        </div>
+    </div><!--/breadcrumbs-->
+{% endblock %}
+<!--=== End Breadcrumbs ===-->
+
+{% block content %}
+    <div class="container content">
+    <div class="headline"><h2>Modus Locas</h2></div>
+        <div class="row margin-bottom-60">
+            <div class="col-md-6 col-sm-6">
+                <!-- Google Map -->
+                <div id="map" class="height-450">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2824.209948908453!2d-93.25485398507841!3d44.93939977632886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f6280c1ad76f3d%3A0x2e85932a1deead9c!2s3500+Bloomington+Ave+S%2C+Minneapolis%2C+MN+55407!5e0!3m2!1sen!2sus!4v1451779968927" width="500" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                <!-- End Google Map -->
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <!-- Get in Touch -->
+                <h3>Get in Touch</h3>
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem</p>
+
+                <hr>
+
+                <!-- Contacts -->
+                <h3>The Office</h3>
+                <ul class="list-unstyled who">
+                    <li><a href="#"><i class="fa fa-home"></i>5B Streat, City 50987 New Town US</a></li>
+                    <li><a href="#"><i class="fa fa-envelope"></i>info@example.com</a></li>
+                    <li><a href="#"><i class="fa fa-phone"></i>1(222) 5x86 x97x</a></li>
+                    <li><a href="#"><i class="fa fa-globe"></i>http://www.example.com</a></li>
+                </ul>
+
+                <hr>
+
+                <!-- Business Hours -->
+                <h3>Business Hours</h3>
+                <ul class="list-unstyled">
+                    <li><strong>Monday-Friday:</strong> 10am to 8pm</li>
+                    <li><strong>Saturday:</strong> 11am to 3pm</li>
+                    <li><strong>Sunday:</strong> Closed</li>
+                </ul>
+            </div>
+        </div>
+    </div><!--/container-->
+    <!--=== End Content Part ===-->
+{% endblock %}
+
+{% block javascript %}
+{% endblock %}

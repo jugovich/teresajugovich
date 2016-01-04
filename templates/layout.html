@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+    <title>Teresa Jugovich</title>
+    {% load staticfiles %}
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href={% static "assets/favicon.ico" %}>
+
+    <!-- Web Fonts -->
+    <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Raleway:400,300,600&amp;subset=cyrillic,latin'>
+
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href= {% static "assets/plugins/bootstrap/css/bootstrap.min.css" %}>
+    <link rel="stylesheet" href={% static "assets/css/style.css"%}>
+
+    <!-- CSS Header and Footer -->
+    <link rel="stylesheet" href={% static "assets/css/headers/header-default.css"%}>
+    <link rel="stylesheet" href={% static "assets/css/footers/footer-v6.css"%}>
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href={% static "assets/plugins/animate.css"%}>
+    <link rel="stylesheet" href={% static "assets/plugins/line-icons/line-icons.css"%}>
+    <link rel="stylesheet" href={% static "assets/plugins/font-awesome-4.5.0/css/font-awesome.min.css"%}>
+
+    <!-- CSS Pricing -->
+    <link rel="stylesheet" href={% static "assets/css/pages/pricing/pricing_v8.css"%}>
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href={% static "assets/css/theme-colors/teal.css" %}/>
+    <link rel="stylesheet" href={% static "assets/css/custom.css" %}>
+    <link rel="stylesheet" href={% static "assets/css/pages/blog_magazine.css" %}>
+    {% block css %}
+    {% endblock %}
+</head>
+
+<body class="boxed-layout container">
+
+<!-- Google Tag Manager -->
+<!--
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NR6KG2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NR6KG2');</script>-->
+<!-- End Google Tag Manager -->
+<div class="wrapper">
+    <!--=== Header ===-->
+    <div class="header">
+        <div class="container">
+            <!-- Logo -->
+            <a class="logo" href="index.html">
+                <img src={% static "assets/img/logo.jpg" %} alt="Logo" style="height: 54px; width: 50px;">
+            </a>
+            <!-- End Logo -->
+
+            <!-- Topbar -->
+            <!--<div class="topbar">
+                <ul class="loginbar pull-right">
+                    <li><a href="page_login.html">Login</a></li>
+                </ul>
+            </div>-->
+            <!-- End Topbar -->
+
+            <!-- Toggle get grouped for better mobile display -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="fa fa-bars"></span>
+            </button>
+            <!-- End Toggle -->
+        </div><!--/end container-->
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <!-- Home -->
+                    <li {% block home_active %}{% endblock %}>
+                        <a href="/">
+                            Home
+                        </a>
+                    </li>
+                    <!-- End Home -->
+                    <!-- Home -->
+                    <li {% block about_active %}{% endblock %}>
+                        <a href="{{ BASE_URL }}/about">
+                            About Teresa
+                        </a>
+                    </li>
+                    <!-- End Home -->
+                    <!-- Yoga -->
+                    <li class="dropdown {% block yoga_active %}{% endblock %}" >
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                            Yoga
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li {% block yoga_schedule_active %}{% endblock %}><a href="{{ BASE_URL }}/yoga_schedule">Schedule</a></li>
+                            <li {% block yoga_class_active %}{% endblock %}><a href="{{ BASE_URL }}/yoga_class">Class Descriptions</a></li>
+                            <li {% block yoga_price_active %}{% endblock %}><a href="{{ BASE_URL }}/yoga_price">Pricing</a></li>
+                            <li {% block yoga_locations_active %}{% endblock %}><a href="{{ BASE_URL }}/yoga_locations">Locations</a></li>
+                        </ul>
+                    </li>
+                    <!-- End Yoga -->
+
+                    <!-- Doula -->
+                    <li class="dropdown {% block doula_active %}{% endblock %}">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                            Doula
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li {% block doula_description_active %}{% endblock %}><a href="{{ BASE_URL }}/doula_description">What is a Doula</a></li>
+                            <li {% block doula_services_active %}{% endblock %}><a href="{{ BASE_URL }}/doula_services">Services Offered</a></li>
+                        </ul>
+                    </li>
+                    <!-- Doula -->
+
+                    <!-- Photo -->
+                    <li {% block photo_active %}{% endblock %}>
+                        <a href="#">
+                            Photography
+                        </a>
+                        <!--<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                            Photography
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ BASE_URL }}/photo_gallery">Gallery</a></li>
+                            <li><a href="{{ BASE_URL }}/photo_price">Pricing</a></li>
+                        </ul>-->
+                    </li>
+                    <!-- End Photo-->
+                </ul>
+            </div><!--/end container-->
+        </div><!--/navbar-collapse-->
+    </div>
+    <!--=== End Header ===-->
+    <!-- Magazine Slider -->
+    {% block slider %}
+    <div class="carousel slide carousel-v1 margin-bottom-40" id="myCarousel-1">
+        <div class="carousel-inner">
+            <div class="item active">
+                <img alt="" src={% static "assets/img/sliders/1.jpg" %}>
+            </div>
+            <div class="item">
+                <img alt="" src={% static "assets/img/sliders/2.jpg" %}>
+            </div>
+            <div class="item">
+                <img alt="" src={% static "assets/img/sliders/3.jpg" %}>
+            </div>
+            <div class="item">
+                <img alt="" src={% static "assets/img/sliders/4.jpg" %}>
+            </div>
+            <div class="item">
+                <img alt="" src={% static "assets/img/sliders/5.jpg" %}>
+            </div>
+            <div class="item">
+                <img alt="" src={% static "assets/img/sliders/6.jpg" %}>
+            </div>
+            <div class="item">
+                <img alt="" src={% static "assets/img/sliders/7.jpg" %}>
+            </div>
+            <div class="item">
+                <img alt="" src={% static "assets/img/sliders/8.jpg" %}>
+            </div>
+        </div>
+
+        <div class="carousel-arrow">
+            <a data-slide="prev" href="#myCarousel-1" class="left carousel-control">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <a data-slide="next" href="#myCarousel-1" class="right carousel-control">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </div>
+    </div>
+    {% endblock %}
+    <!-- End Magazine Slider -->
+    {% block breadcrumbs %}
+    {% endblock %}
+
+    <!--=== Content Part ===-->
+    {% block content %}
+
+
+    {% endblock %}
+    <!-- End Content Part -->
+    <!--=== Footer v6 ===-->
+    <div id="footer-v6" class="footer-v6">
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <!-- Recent News -->
+                    <div class="col-md-offset-2 col-md-3 sm-margin-bottom-40">
+                        <div class="heading-footer"><h2>Recent News</h2></div>
+                        <ul class="list-unstyled link-news">
+                            <li>
+                                <a href="#" target="_top">Launch of TeresaJugovich.com</a>
+                                <small>3 January, 2015</small>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End Recent News -->
+
+                    <!-- Useful Links -->
+                    <div class="col-md-3 sm-margin-bottom-40">
+                        <div class="heading-footer"><h2>Useful Links</h2></div>
+                        <ul class="list-unstyled footer-link-list">
+                            <li><a href="https://www.facebook.com/moduslocus" target="_blank">Modus Locas</a></li>
+                            <li><a href="http://www.blooma.com/" target="_blank">Blooma</a></li>
+                            <li><a href="https://www.prodoula.com/" target="_blank">ProDoula</a></li>
+                        </ul>
+                    </div>
+                    <!-- End Useful Links -->
+
+                    <!-- Contacts -->
+                    <div class="col-md-3">
+                        <div class="heading-footer"><h2>Contact</h2></div>
+                        <ul class="list-unstyled contacts">
+                            <li>
+                                <i class="radius-3x fa fa-phone"></i>
+                                (+612) 327 2751
+                            </li>
+                            <li>
+                                <i class="radius-3x fa fa-globe"></i>
+                                <a href="#" style="padding-top: 10px;">teresa.jugovich@gmail.com</a><br>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End Contacts -->
+                </div>
+            </div><!--/container -->
+        </div>
+
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 sm-margon-bottom-10">
+                        <ul class="list-inline terms-menu">
+                            <li class="silver">Copyright © 2014 - All Rights Reserved</li>
+                            <!--<li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Privacy and Policy</a></li>-->
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="list-inline dark-social pull-right space-bottom-0">
+                            <li>
+                                <a data-placement="top" data-toggle="tooltip" class="tooltips" data-original-title="Facebook" href="#">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a data-placement="top" data-toggle="tooltip" class="tooltips" data-original-title="Twitter" href="#">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a data-placement="top" data-toggle="tooltip" class="tooltips" data-original-title="Google plus" href="#">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a data-placement="top" data-toggle="tooltip" class="tooltips" data-original-title="Instagram" href="#">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--=== End Footer v6 ===-->
+
+</div><!--/wrapper-->
+
+<!-- JS Global Compulsory -->
+<script type="text/javascript" src={% static "assets/plugins/jquery/jquery.min.js" %}></script>
+<script type="text/javascript" src={% static "assets/plugins/jquery/jquery-migrate.min.js" %}></script>
+<script type="text/javascript" src={% static "assets/plugins/bootstrap/js/bootstrap.min.js" %}></script>
+<!-- JS Implementing Plugins -->
+<script type="text/javascript" src={% static "assets/plugins/back-to-top.js" %}></script>
+<script type="text/javascript" src={% static "assets/plugins/smoothScroll.js" %}></script>
+<script type="text/javascript" src={% static "assets/plugins/parallax-slider/js/modernizr.js" %}></script>
+<script type="text/javascript" src={% static "assets/plugins/parallax-slider/js/jquery.cslider.js" %}></script>
+<script type="text/javascript" src={% static "assets/plugins/owl-carousel/owl-carousel/owl.carousel.js" %}></script>
+<!-- JS Customization -->
+<script type="text/javascript" src={% static "assets/js/custom.js" %}></script>
+<!-- JS Page Level -->
+<script type="text/javascript" src={% static "assets/js/app.js" %}></script>
+<script type="text/javascript" src={% static "assets/js/plugins/owl-carousel.js" %}></script>
+<script type="text/javascript" src={% static "assets/js/plugins/parallax-slider.js" %}></script>
+{% block javascript %}
+{% endblock %}
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+      	App.init();
+        OwlCarousel.initOwlCarousel();
+        ParallaxSlider.initParallaxSlider();
+    });
+</script>
+<!--[if lt IE 9]>
+    <script src={% static "assets/plugins/respond.js" %}></script>
+    <script src={% static "assets/plugins/html5shiv.js" %}></script>
+    <script src={% static "assets/plugins/placeholder-IE-fixes.js" %}></script>
+<![endif]-->
+
+</body>
+</html>

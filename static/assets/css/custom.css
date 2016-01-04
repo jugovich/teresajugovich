@@ -1,0 +1,7 @@
+/* Add here all your css styles (customizations) */
+
+
+
+.schedule-table tr > td {
+  padding: 0 10px 10px 10px;
+}

@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+{% load staticfiles %}
+
+{% block yoga_active %}active{% endblock %}
+{% block yoga_schedule_active %}class="active"{% endblock %}
+
+{% block slider %}
+{% endblock %}
+
+<!--=== Breadcrumbs ===-->
+{% block breadcrumbs %}
+    <div class="breadcrumbs breadcrumbs-light">
+        <div class="container">
+            <h1 class="pull-left">Yoga Schedule<Doulas></Doulas></h1>
+        </div>
+    </div><!--/breadcrumbs-->
+{% endblock %}
+<!--=== End Breadcrumbs ===-->
+
+
+{% block content %}
+    <div class="container content">
+        <!-- Pricing Table-v8 -->
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Horizontal Description -->
+                <div class="headline"><h2>Modus Locas</h2></div>
+                <dl class="dl-horizontal">
+                    <dt>Tuesday</dt>
+                    <dd><table class="schedule-table">
+                            <tr>
+                                <td>&nbsp7:45 pm - &nbsp9:00 pm&nbsp</td>
+                                <td><a href="#">Community Vinyasa</a></td>
+                            </tr>
+                        </table>
+                    </dd>
+                    <dt>Wednesday</dt>
+                    <dd><table class="schedule-table">
+                            <tr>
+                                <td>11:00 am - 12:15 pm</td>
+                                <td><a href="#">Finding Zen in the Chaos</a></td>
+                            </tr>
+                        </table>
+                    </dd>
+                    <dt>Saturday</dt>
+                    <dd><table class="schedule-table">
+                            <tr>
+                                <td>&nbsp9:00 am - 10:15 am</td>
+                                <td><a href="#">Prenatal Yoga</a></td>
+
+                            </tr>
+                            <tr>
+                                <td>10:30 am - 12:00 pm</td>
+                                <td><a href="#">Community Vinyasa</a></td>
+                            </tr>
+                        </table>
+                    </dd>
+                </dl>
+                <div class="headline"><h2>Blooma</h2></div>
+                <dl class="dl-horizontal">
+                    <dt>Wednesday</dt>
+
+                    <dd><table class="schedule-table">
+                            <tr>
+                                <td><a href="#">Slow Flow Yoga</a></td>
+                                <td>6:00pm - 7:00pm</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Prenatal Yoga</a></td>
+                                <td>7:15pm - 8:30pm</td>
+                            </tr>
+                        </table>
+                    </dd>
+                </dl>
+                <!-- End Horizontal Description -->
+            </div>
+        </div>
+        <!-- End Pricing Table-v8 -->
+    </div><!--/container-->
+    <!--=== End Content Part ===-->
+{% endblock %}

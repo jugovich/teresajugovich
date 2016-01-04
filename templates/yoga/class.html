@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+{% load staticfiles %}
+
+{% block slider %}
+{% endblock %}
+
+{% block yoga_active %}active{% endblock %}
+{% block yoga_class_active%}class="active"{% endblock %}
+
+<!--=== Breadcrumbs ===-->
+{% block breadcrumbs %}
+    <div class="breadcrumbs breadcrumbs-light">
+        <div class="container">
+            <h1 class="pull-left">Class Descriptions<Doulas></Doulas></h1>
+        </div>
+    </div><!--/breadcrumbs-->
+{% endblock %}
+<!--=== End Breadcrumbs ===-->
+
+{% block content %}
+    <!--=== Content Part ===-->
+    <div class="container content">
+    	<div class="row">
+        	<div class="col-md-12">
+                <!-- Classes Block-->
+                <div class="row clients-page">
+                    <div class="col-md-offset-2 col-md-9">
+                        <h3>Community Vinyasa</h3>
+                        <ul class="list-inline">
+                            <li><i class="fa fa-map-marker color-green"></i> Modus Locas</li>
+                            <li><i class="fa fa-globe color-green"></i> <a class="linked" href="https://www.facebook.com/moduslocus" target="_blank">facebook.com/moduslocus</a></li>
+                            <li><i class="fa fa-odnoklassniki color-green"></i> All Levels</li>
+                            <li data-toggle="tooltip" class="tooltips" title="Tuesday 7:00 pm - 9:45 pm Saturday 10:30 am - 12:00 pm"><a href="{{ BASE_URL }}/yoga_schedule"><i class="fa fa-clock-o color-green"></i></a></li>
+                        </ul>
+                        <p>This class is for new yogis, experienced yoginis, their parents, professional athletes and/or people that can’t touch their toes. If it’s your first yoga class, fear not, you’ll be fine. If you’ve been practicing for 2 decades, I promise you won’t be bored. Modifications will be given to compliment any practice level. We will stay rooted and focus on alignment while breathing and opening our hearts together as a community.</p>
+                        <p>In each class you can expect to: sweat, laugh and leave feeling a step closer to nirvana.</p>
+                    </div>
+                </div>
+                <!-- End Classes Block-->
+
+                <!-- Classes Block-->
+                <div class="row clients-page">
+                    <div class="col-md-offset-2 col-md-9">
+                        <hr>
+                        <h3>Finding Zen in the Chaos</h3>
+                        <h4>A class for parents and/or caregivers and their small children</h4>
+                        <ul class="list-inline">
+                            <li><i class="fa fa-map-marker color-green"></i> Modus Locas</li>
+                            <li><i class="fa fa-globe color-green"></i> <a class="linked" href="https://www.facebook.com/moduslocus" target="_blank">facebook.com/moduslocus</a></li>
+                            <li><i class="fa fa-odnoklassniki color-green"></i> All Levels</li>
+                            <li data-toggle="tooltip" class="tooltips" title="Wednesday ? - ?"><a href="{{ BASE_URL }}/yoga_schedule"><i class="fa fa-clock-o color-green"></i></a></li>
+
+                        </ul>
+                        <p>Want to get on your mat, but don’t have a sitter? Want your child to have exposure to the practice of yoga? Feel like you’re losing your mind and NEED to get out of your house, like right now??? Bring your kiddo, a couple of toys and an open mind. We will find fun in the chaos. We will move, breathe and try on what it feels like to find our center even in the thick of life.</p>
+
+                    </div>
+                </div>
+                <!-- End Classes Block-->
+
+                <!-- Classes Block-->
+                <div class="row clients-page">
+                    <div class="col-md-offset-2 col-md-9">
+                        <hr class="devider devider-db">
+                        <h3>Prenatal Yoga</h3>
+                        <ul class="list-inline">
+                            <li><i class="fa fa-map-marker color-green"></i> Modus Locas</li>
+                            <li><i class="fa fa-globe color-green"></i> <a class="linked" href="https://www.facebook.com/moduslocus" target="_blank">facebook.com/moduslocus</a></li>
+                            <li><i class="fa fa-odnoklassniki color-green"></i> Prenatal</li>
+                            <li data-toggle="tooltip" class="tooltips" title="Saturday 9:00 am - 10:15 am   "><a href="{{ BASE_URL }}/yoga_schedule"><i class="fa fa-clock-o color-green"></i></a></li>
+                        </ul>
+                        <p>Teresa’s approach to all yoga is a perfect integration of practicing from the heart while finding deep physical challenge and relaxation.</p>
+                        <p>Her prenatal yoga class is no exception to the rule.  In this class, mamas-to-be will flow with their breath, stretch, strengthen and explore new possibilities with their body and mind.  Yoga is a great way for women to maintain health during pregnancy, keep a calm mind and stay connected with their babies.  Come get your groove on!  No experience required.  Dress comfortably and come prepared to breathe and have fun!!</p>
+
+                    </div>
+                </div>
+                <!-- End Classes Block-->
+
+            </div><!--/col-md-9-->
+
+
+        </div><!--/row-->
+    </div><!--/container-->
+    <!--=== End Content Part ===-->
+{% endblock %}
