@@ -49,7 +49,7 @@
 .pricing-head h4 {
 	color: #888;
 	padding:5px 0;
-	font-size:70px;
+	font-size: 50px;
 	text-shadow:0 1px 0 #fff;
 	border-bottom:solid 1px #f5f9e7;
 }
@@ -850,14 +850,12 @@ background-color: #717984!important;
 }
 .pricing-mega-v3 .pricing-head h3 {
 	font-size: 28px;
-	min-height: 76px;
 	font-weight: normal !important;
 	border-left: 1px solid #eee;
 }
 
 .pricing-mega-v3  h4 {
 	color: #888;
-	min-height: 100px;
 	border-top: 1px solid #eee ;
 	border-right: 1px solid #eee ;
  	font-weight: normal !important;
@@ -882,7 +880,7 @@ background-color: #717984!important;
 }
 .pricing-mega-v3 .hidden-area .pricing-head h4 {
 	font-size: 28px;
-	padding: 34px 0 34px 15px;
+	padding: 17pxpx 0 0 15px;
 	border-left: 1px solid #eee; 
 }
 .pricing-mega-v3 .hidden-area:hover .pricing-head h4 {
