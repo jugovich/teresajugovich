@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% load staticfiles %}
-
+{% block title %}About Teresa{% endblock %}
 {% block about_active %}class="active"{% endblock %}
 
 {% block slider %}
@@ -16,7 +16,7 @@
         <div class="row about-me">
             <div class="col-sm-4 shadow-wrapper md-margin-bottom-40">
                 <div class="box-shadow shadow-effect-2">
-                    <img class="img-responsive img-bordered full-width" src={% static "assets/img/Bio.jpg" %} alt="Bio Picture">
+                    <img class="img-responsive img-bordered full-width" src={% static "assets/img/Bio.jpg" %} alt="Bio Picture, Teresa flying baby Leif">
                 </div>
             </div>
 
@@ -49,6 +49,12 @@
             </div>
         </div>
         <!-- End Quote v2 -->
+
+        <hr>
+        <blockquote>
+            <h2>Photo Credit</h2>
+            <p>&#169; 2013 Electric Lime Photography | <a href="http://www.electriclimephoto.com" target="_blank">electriclimephoto.com</a></p>
+        </blockquote>
     </div>
     <!-- End About Me Block -->
 
