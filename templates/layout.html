@@ -113,29 +113,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <!-- End Yoga -->
 
                     <!-- Doula -->
-                    <li class="dropdown {% block doula_active %}{% endblock %}">
-                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+					<li {% block doula_active %}{% endblock %}>
+                        <a href="{{ BASE_URL }}/doula_services">
                             Doula
                         </a>
-                        <ul class="dropdown-menu">
-                            <li {% block doula_description_active %}{% endblock %}><a href="{{ BASE_URL }}/doula_description">What is a Doula</a></li>
-                            <li {% block doula_services_active %}{% endblock %}><a href="{{ BASE_URL }}/doula_services">Services Offered</a></li>
-                        </ul>
                     </li>
                     <!-- Doula -->
 
                     <!-- Photo -->
-                    <li {% block photo_active %}{% endblock %}>
-                        <a href="#">
+                    <li {% block about_active %}{% endblock %}>
+                        <a href="{{ BASE_URL }}/photo">
                             Photography
                         </a>
-                        <!--<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-                            Photography
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{{ BASE_URL }}/photo_gallery">Gallery</a></li>
-                            <li><a href="{{ BASE_URL }}/photo_price">Pricing</a></li>
-                        </ul>-->
                     </li>
                     <!-- End Photo-->
                 </ul>
